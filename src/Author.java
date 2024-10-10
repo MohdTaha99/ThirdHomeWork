@@ -85,16 +85,5 @@ class Library {
             }
         }
     }
-
-    public static void main(String[] args) {
-        Library library = new Library();
-
-        Author author1 = new Author("J.K. Rowling", 55, "Fantasy");
-        Book book1 = new Book("Harry Potter", "Fantasy", 500);
-        library.addAuthor(author1);
-        library.addBookToAuthor("J.K. Rowling", book1);
-
-        library.getAllBooksAndAuthors();
-    }
 }
 

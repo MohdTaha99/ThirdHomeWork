@@ -18,10 +18,5 @@ public class AverageCalculator {
 
         return sum / 3.0;
     }
-
-    public static void main(String[] args) {
-        double average = getAverage();
-        System.out.println("The average is: " + average);
-    }
 }
 

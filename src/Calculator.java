@@ -42,46 +42,5 @@ class Calculator {
             System.out.println(operation);
         }
     }
-
-    public static void main(String[] args) {
-        Calculator calculator = new Calculator();
-        Scanner scanner = new Scanner(System.in);
-
-        boolean quit = false;
-        while (!quit) {
-            System.out.println("Enter operation: add, subtract, multiply, divide, or quit:");
-            String operation = scanner.next();
-
-            if (operation.equals("quit")) {
-                quit = true;
-                calculator.displayOperations();
-            } else {
-                System.out.println("Enter two numbers:");
-                double num1 = scanner.nextDouble();
-                double num2 = scanner.nextDouble();
-
-                switch (operation) {
-                    case "add":
-                        calculator.add(num1, num2);
-                        break;
-                    case "subtract":
-                        calculator.subtract(num1, num2);
-                        break;
-                    case "multiply":
-                        calculator.multiply(num1, num2);
-                        break;
-                    case "divide":
-                        try {
-                            calculator.divide(num1, num2);
-                        } catch (ArithmeticException e) {
-                            System.out.println("Error: " + e.getMessage());
-                        }
-                        break;
-                    default:
-                        System.out.println("Invalid operation");
-                }
-            }
-        }
-    }
 }
 
